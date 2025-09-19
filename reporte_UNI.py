@@ -93,21 +93,22 @@ grupo_actual_matriculados = pd.pivot_table(matriculados251, index="Grupo_edad_ac
 print(grupo_actual_matriculados.sort_values(by="2025-1", ascending=False))
 
 
-#with pd.ExcelWriter(ruta_data + 'REPORTE_MATRICULADOS_UNI.xlsx', engine='xlsxwriter') as writer:
-    #df_uni.to_excel(writer, sheet_name='DATA', index=False)
-    #alumnos_matriculados_ciclo.to_excel(writer, sheet_name='PERIODO')
-    #matriculados_carreras.to_excel(writer, sheet_name='CARRERA')
-    #matriculados_sexo.to_excel(writer, sheet_name='SEXO')
-    #matriculados_ciclo_ord.to_excel(writer, sheet_name='CICLO')
-    #departamento_matri.to_excel(writer, sheet_name='DEPARTAMENTO')
-    #grupo_actual_matriculados.to_excel(writer, sheet_name='Grupo edad')
+with pd.ExcelWriter(ruta_data + 'REPORTE_MATRICULADOS_UNI.xlsx', engine='xlsxwriter') as writer:
+    df_uni.to_excel(writer, sheet_name='DATA', index=False)
+    alumnos_matriculados_ciclo.to_excel(writer, sheet_name='PERIODO')
+    matriculados_carreras.to_excel(writer, sheet_name='CARRERA')
+    matriculados_sexo.to_excel(writer, sheet_name='SEXO')
+    matriculados_ciclo_ord.to_excel(writer, sheet_name='CICLO')
+    departamento_matri.to_excel(writer, sheet_name='DEPARTAMENTO')
+    grupo_actual_matriculados.to_excel(writer, sheet_name='Grupo edad')
 
-#print("Archivo generado ..................")
+print("Archivo generado")
 
 
 
 
     
+
 
 
 
